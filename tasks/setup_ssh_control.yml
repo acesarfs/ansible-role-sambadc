@@ -1,0 +1,12 @@
+- name: Cria diretório /root/.ssh/ctl
+  file:
+    path: /root/.ssh/ctl/
+    state: directory
+
+- name: Copia arquivo config
+  template:
+    src: config
+    dest: /root/.ssh/ctl/config
+    owner: root
+    group: root
+    mode: 0640

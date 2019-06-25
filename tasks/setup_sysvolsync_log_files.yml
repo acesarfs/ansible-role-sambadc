@@ -1,0 +1,9 @@
+- name: Cria o arquivo sysvol-sync.log
+  file:
+    path: /var/log/sysvol-sync.log
+    state: touch
+    owner: root
+    group: root
+    mode: 0640
+    #mode: u=rw,g=r,o=r
+

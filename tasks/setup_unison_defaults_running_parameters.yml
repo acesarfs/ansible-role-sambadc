@@ -1,0 +1,15 @@
+- name: Cria diretório /root/.unison
+  file:
+    path: /root/.unison/
+    state: directory
+
+- name: Executa comando
+  command: install -o root -g root -m 0750 -d /root/.unison
+
+- name: Copia arquivo default.prf
+  template:
+    src: default.prf
+    dest: /root/.unison/default.prf
+    owner: root
+    group: root
+    mode: 0640

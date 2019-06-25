@@ -1,0 +1,9 @@
+- name: Instala rsync
+  package:
+    name: rsync
+    state: present
+
+- name: Instala unison
+  package:
+    name: unison
+    state: present
